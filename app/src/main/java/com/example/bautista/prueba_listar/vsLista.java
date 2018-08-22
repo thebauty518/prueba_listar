@@ -1,12 +1,16 @@
 package com.example.bautista.prueba_listar;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class vsLista extends AppCompatActivity {
@@ -32,7 +36,19 @@ public class vsLista extends AppCompatActivity {
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, Informacion);
         lvLista.setAdapter(adapter);
 
+        lvLista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+               Entidades usuario = ListaUsuario.get(i);
+
+                Intent intent = new Intent(vsLista.this, vsInformacion.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("entidad", (Serializable) usuario);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
 
     }
 

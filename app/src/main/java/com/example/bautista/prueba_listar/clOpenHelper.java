@@ -30,9 +30,9 @@ public class clOpenHelper extends SQLiteOpenHelper{
         sqLiteDatabase.execSQL("Insert Into tblEmpleado (Documento, Nombres, Apellidos, FechaNacimiento,"
                 + "Foto, Sueldo,DirLat,DirLng, Email, Telefono)values('1234567890','John Alexander', 'Bautista Balaguera'," +
                 " '9/may/1999', 'foto1', '870.000', '5.720242', '-72.928679', 'Jabautista065@misena.edu.co', '3209332147')," +
-            "('1234567891','John Alexander', 'Bautista Balaguera'," +
-                 " '9/may/1999', 'foto1', '870.000', '5.723584', '-72.923248', 'Jabautista065@misena.edu.co', '3209332147'),"+
-            "('1234567892','John Alexander', 'Bautista Balaguera'," +
+            "('1234567891','Junior Harvey', 'Bonilla Montaña'," +
+                 " '9/may/1999', 'foto1', '870.000', '5.723584', '-72.923248', 'Juniorbonilla100@misena.edu.co', '3209332147'),"+
+            "('1234567892','Alexander', 'Bautista Balaguera'," +
                 " '9/may/1999', 'foto1', '870.000', '5.755636', '-72.909074', 'Jabautista065@misena.edu.co', '3209332147')");
 
     }
