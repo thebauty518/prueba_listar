@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">prueba_listar</string>
     <string name="Bienvenido">Bienvenido a listar</string>
+    <string name="Documento">Documento</string>
+    <string name="Nombres">Nombres</string>
+    <string name="Apellidos">Apellidos</string>
+    <string name="Fecha_nacimiento">Fecha De Nacimiento</string>
+
 </resources>
