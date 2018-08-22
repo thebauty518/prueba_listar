@@ -15,6 +15,10 @@ public class Entidades implements Serializable{
     private String Email;
     private String Telefono;
 
+    public Entidades() {
+
+    }
+
     public Entidades(String documento, String nombre, String apellidos, String fecha_Nacimiento, String foto, String sueldo, Double dirLat, Double dirLng, String email, String telefono) {
         Documento = documento;
         Nombre = nombre;
