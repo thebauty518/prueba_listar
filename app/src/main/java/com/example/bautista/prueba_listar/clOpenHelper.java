@@ -35,6 +35,8 @@ public class clOpenHelper extends SQLiteOpenHelper{
             "('1234567892','Alexander', 'Bautista Balaguera'," +
                 " '9/may/1999', 'foto1', '870.000', '5.755636', '-72.909074', 'Jabautista065@misena.edu.co', '3209332147')");
 
+
+
     }
 
 

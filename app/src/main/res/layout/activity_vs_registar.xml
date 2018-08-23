@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".vsRegistar">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/lbDocumento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Documento :" />
+
+            <EditText
+                android:id="@+id/txtDocumento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="Digite su Documento"
+                android:inputType="number" />
+            <TextView
+                android:id="@+id/lbNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre :" />
+
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                android:hint="Digite su Nombre"
+                android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/lbApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apellidos :" />
+
+            <EditText
+                android:id="@+id/txtApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                android:hint="Digite sus Apellidos"
+                android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/lbFechaNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha de Nacimiento:" />
+
+            <EditText
+                android:id="@+id/txtFechaNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="Digite su Fecha de  Nacimiento"
+                android:inputType="textPersonName|datetime" />
+            <TextView
+                android:id="@+id/lbSueldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sueldo :" />
+
+            <EditText
+                android:id="@+id/txtSueldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                android:hint="Digite su Sueldo"
+                android:inputType="number"  />
+            <TextView
+                android:id="@+id/lbDireccionLat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Direccion Lat :" />
+
+            <EditText
+                android:id="@+id/txtDireccionLat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="Digite su Latitud"
+                android:inputType="numberDecimal" />
+            <TextView
+                android:id="@+id/lbDireccionLng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Direccion Lng :" />
+
+            <EditText
+                android:id="@+id/txtDireccionLng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="Digite su Longitud"
+                android:inputType="numberDecimal" />
+
+            <TextView
+            android:id="@+id/lbEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email :" />
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="Digite su Email"
+                android:inputType="textEmailAddress" />
+
+
+
+            <TextView
+                android:id="@+id/lbTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefono :" />
+            <EditText
+                android:id="@+id/txtTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                android:hint="Digite su Telefono"
+                android:inputType="number" />
+            <Button
+                android:id="@+id/Regsitrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GUARDAR" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

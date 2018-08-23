@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".vsLista" />
-        <activity android:name=".vsInformacion"></activity>
+        <activity android:name=".vsInformacion" />
+        <activity android:name=".vsRegistar"></activity>
     </application>
 
 </manifest>
