@@ -5,5 +5,6 @@
     <string name="Nombres">Nombres</string>
     <string name="Apellidos">Apellidos</string>
     <string name="Fecha_nacimiento">Fecha De Nacimiento</string>
+    <string name="title_activity_mapa">Map</string>
 
 </resources>

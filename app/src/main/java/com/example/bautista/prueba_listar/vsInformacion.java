@@ -1,15 +1,21 @@
 package com.example.bautista.prueba_listar;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.Serializable;
+
 public class vsInformacion extends AppCompatActivity {
 
     TextView lbDocumento, lbNombre, lbApellido, lbFnacimiento, lbSueldo, lbEmail, lbTefono;
-    ImageView imgFoto;
+    ImageView imgFoto, imgMapa;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +30,14 @@ public class vsInformacion extends AppCompatActivity {
         lbSueldo=(TextView)findViewById(R.id.lbSueldo);
         lbEmail=(TextView)findViewById(R.id.lbEmail);
         lbTefono=(TextView)findViewById(R.id.lbTelefono);
+        imgMapa=(ImageView)findViewById(R.id.imgMapa);
+        imgMapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(vsInformacion.this, Mapa.class);
+                startActivity(intent);
+            }
+        });
 
         Bundle objeto= getIntent().getExtras();
         Entidades entidades = null;
@@ -38,11 +52,21 @@ public class vsInformacion extends AppCompatActivity {
             lbEmail.setText(entidades.getEmail().toString());
             lbTefono.setText(entidades.getTelefono().toString());
 
+            String DirLat = entidades.getDirLat().toString();
+            String DirLng = entidades.getDirLng().toString();
+
+
+
+
+
 
 
 
         }
 
 
+
     }
+
+
 }

@@ -102,7 +102,7 @@
                 android:layout_marginBottom="10dp"
                 android:ems="10"
                 android:hint="Digite su Latitud"
-                android:inputType="numberDecimal" />
+                android:inputType="numberSigned|numberDecimal" />
             <TextView
                 android:id="@+id/lbDireccionLng"
                 android:layout_width="match_parent"
@@ -116,7 +116,7 @@
                 android:layout_marginBottom="10dp"
                 android:ems="10"
                 android:hint="Digite su Longitud"
-                android:inputType="numberDecimal" />
+                android:inputType="numberSigned|numberDecimal" />
 
             <TextView
             android:id="@+id/lbEmail"

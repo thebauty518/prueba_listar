@@ -1,5 +1,10 @@
 package com.example.bautista.prueba_listar;
 
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.widget.Toast;
+
 import java.io.Serializable;
 
 public class Entidades implements Serializable{
@@ -14,23 +19,39 @@ public class Entidades implements Serializable{
     private Double DirLng;
     private String Email;
     private String Telefono;
-
+    long uno;
     public Entidades() {
 
     }
 
-    public Entidades(String documento, String nombre, String apellidos, String fecha_Nacimiento, String foto, String sueldo, Double dirLat, Double dirLng, String email, String telefono) {
-        Documento = documento;
-        Nombre = nombre;
-        Apellidos = apellidos;
-        Fecha_Nacimiento = fecha_Nacimiento;
-        Foto = foto;
-        Sueldo = sueldo;
-        DirLat = dirLat;
-        DirLng = dirLng;
-        Email = email;
-        Telefono = telefono;
-    }
+
+   public long mtdRegistrar(Context context){
+       clOpenHelper base = new clOpenHelper(context,"bdListar",null,1);
+       SQLiteDatabase datos=base.getWritableDatabase();
+        try {
+
+            ContentValues values = new ContentValues();
+            values.put("Documento",Documento);
+            values.put("Nombres", Nombre);
+            values.put("Apellidos", Apellidos);
+            values.put("FechaNacimiento", Fecha_Nacimiento);
+            values.put("Sueldo", Sueldo);
+            values.put("Foto", "uno");
+            values.put("DirLat", DirLat);
+            values.put("DirLng", DirLng);
+            values.put("Email", Email);
+            values.put("Telefono", Telefono);
+            uno= datos.insert("tblEmpleado",null,values);
+
+
+        }catch (Exception e){
+              Toast.makeText(context, ""+uno, Toast.LENGTH_SHORT).show();
+
+        }
+
+
+        return uno;
+   }
 
     public String getDocumento() {
         return Documento;
