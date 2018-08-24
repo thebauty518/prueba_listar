@@ -1,5 +1,8 @@
 package com.example.bautista.prueba_listar;
 
+import android.content.ContentResolver;
+import android.content.Intent;
+import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -15,11 +18,16 @@ import com.google.android.gms.maps.model.PolylineOptions;
 public class Mapa extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    Entidades entidades = new Entidades();
 
-    Double lat= entidades.getDirLat();
-    Double lng= entidades.getDirLng();
+    //String entidades[]= getIntent().getStringArrayExtra("d");
+    String[] entidades= getIntent().getStringArrayExtra("d");
+    //Double lat= Double.valueOf(entidades[0]);
+    String lat= entidades[0];
+
+
+    Double lng= Double.valueOf(entidades[1]);
     Double lati=5.729212;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +36,18 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+/*
+        try {
+            int gps= Settings.Secure.getInt(getApplication().getContentResolver(), Settings.Secure.LOCATION_MODE);
+                if (gps == 0){
+                    Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    startActivity(intent);
+                }
+
+        } catch (Settings.SettingNotFoundException e) {
+            e.printStackTrace();
+        }*/
     }
 
 
